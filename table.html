@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="table.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Weather Dashboard</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="close-btn" id="close-btn">&times;</div>
+  <div class="logo">
+    <img style="width:100%;" src="/images/logo.png" alt="weatherlogo">
+  </div>
+  <div class="nav-item item1"><a style="text-decoration: none; color:white;" href="index.html">Dashboard</a></div>
+  <div class="nav-item item2"><a style="text-decoration: none; color:white;" href="table.html">Tables</a></div>
+  </div>
+
+
+<div class="main-content" id="main-content">
+  <div class="header">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="search-div" style="display: flex; align-items: center;">
+            <input type="text" class="search-bar" placeholder="Enter a City">
+            <div><button class="searchbutton">Search</button></div>
+            </div>
+           <div class="error"></div>
+    </div>
+   
+
+    <div class="user-profile">
+
+        <img style="width: 100%; border-radius:inherit; cursor: pointer;" src="/images/personal.png" alt="dsw">
+    </div>
+</div>
+
+<div style="display: flex;
+flex-direction: row; justify-content: space-evenly;">
+
+
+<div class="dashboard-container">
+<div class="table-container">
+ <div style="display: flex; flex-direction: row; justify-content: space-between;">
+  <h2>Forecast</h2>
+    <select style="background-color: white; height: 30px;" name="" id="city-dropdown" >
+      <option value="0">Choose</option>
+      <option value="1">SortAsc</option>
+      <option value="2">Filter</option>
+      <option value="3">Reduce</option>
+      <option value="4">SortDes</option>
+    </select>
+
+ </div> 
+
+
+<table id="weather-table">
+
+</table>
+
+</div>
+
+<div class="chatbot-container">
+<div class="chat-bar">
+<input type="text" id="chat-input" placeholder="Ask about weather...">
+<button id="send-btn">Send</button>
+</div>
+<div class="answer-area" id="chatbot-answers">
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run/@google/generative-ai"
+    }
+  }
+</script>
+<script src="api-table.js" type="module"></script>
+
+
+</body>
+</html>
